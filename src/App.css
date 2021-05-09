@@ -1,38 +1,95 @@
+.body{
+  /* counter-reset: section; */
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  background-color: rgb(58, 58, 231);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar>button{
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.notes {
+  background-color: #F5F5F5
+}
+
+.border-bottom{
+  border-bottom: 20px solid  rgb(58, 58, 231) !important;
+}
+
+.rounded{
+  border-radius: 10px !important;
+}
+
+input.border{
+  border: 2px solid black !important;
+}
+
+.rounded-bottom{
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+
+.rounded-top{
+  border-top-right-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+}
+
+li{
+  list-style: none;
+  counter-increment: section;
+}
+
+li::before{
+  content: counter(section);
+  font-weight: bold;
+  background-color: rgb(58, 58, 231);
+  color: #F5F5F5;
+  margin: -1rem 0rem 0rem -1rem;
+  display: inline-block; 
+  padding: 3px 11px;
+  position: absolute;
+  border-radius: 20%;
+}
+
+
+.trashicon, .btn-st{
+  background-color:  rgb(58, 58, 231) !important;
+  color: #F5F5F5;
+  width: fit-content;
+  height: fit-content;
+  padding-bottom: 0.4rem;
+  padding-top: 0.3rem;
+}
+
+.d-flex{
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.shadow{
+  box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.6)!important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shadow-light{
+  box-shadow: 0 0.1rem 0.5rem rgba(255, 255, 255, 0.6)!important;
+}
+
+input:focus, .btn:focus,.btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+button, .btn{
+  font-size: 1.2vw;
+}
+
+.main{
+  margin: 10vw 25vw;
+  width: 48vw;
+  font-size: 1.2vw;
 }
